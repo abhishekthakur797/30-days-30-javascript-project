@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#153677,#4e085f);
+    padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo-app h2{
+    display: flex;
+    align-items: center;
+
+}
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding-left: 10px;
+    background: rgb(246, 243, 243);
+    margin-top: 20px;
+}
+.row input{
+    flex: 1;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+.row button{
+    border: 0;
+    outline: 0;
+    padding: 10px 30px;
+    background: rgb(235, 73, 9);
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+ul{
+    margin-top: 10px;
+}
+ul li{
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    position: relative;
+}
+ul li::before{
+    position: absolute;
+    content: '';
+    background-image: url(img/unchecked.png);
+    background-position: center;
+    background-size: cover;
+    height: 28px;
+    width: 28px;
+    top: 12px;
+    left: 8px;
+}
+ul .checked{
+    color: grey;
+    text-decoration: line-through;
+
+}
+ul .checked::before{
+    background-image: url(img/checked.png);
+}
+
+/* the element has created in js and append in ul li */
+ul li span{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+
+}
+ul li span:hover{
+    background-color: rgb(247, 91, 91);
+    cursor: pointer;
+}
