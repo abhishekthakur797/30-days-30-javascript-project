@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Application</title>
+    <link rel="shortcut icon" href="img/drizzle.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/src/output.css" />
+  </head>
+  <body>
+    <!-- card Class :: Search (input field) and Weather(Weather Details)-->
+    <div class="card bg-gradient-to-r from-cyan-500 to-blue-500">
+      <!-- search class :: input and button search icon-->
+      <div class="search">
+        <input
+          class=""
+          type="text"
+          name=""
+          id=""
+          placeholder="Enter city name"
+          spellcheck="false"
+        />
+        <button><img src="img/search.png" alt="" /></button>
+      </div>
+      <!-- Wrong city name message -->
+      <div class="error">
+        <p>Invalid city name</p>
+      </div>
+      <!-- weather class :: rain img tag, h1, h2 :: details-->
+      <div class="weather-main">
+        <div class="weather">
+          <img src="img/rain.png" alt="" class="weather-icon" />
+          <h1 class="temp">0°c</h1>
+          <h2 class="city">Unknown City</h2>
+          <!-- details class :: 2 col(img, div(2 P))-->
+          <div class="details">
+            <div class="col">
+              <img src="img/humidity.png" alt="" />
+              <div>
+                <p class="humidity">N/A</p>
+                <p>Humidity</p>
+              </div>
+              <div class="col">
+                <img src="img/wind.png" alt="" />
+                <div>
+                  <p class="wind">N/A</p>
+                  <p>Wind</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--! script Link -->
+    <script src="script.js"></script>
+  </body>
+</html>
