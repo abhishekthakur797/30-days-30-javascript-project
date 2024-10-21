@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins, "san-serif";
+}
+body {
+  background-color: rgb(28, 28, 50);
+}
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: 12%;
+  padding: 5px;
+
+}
+.container h1 {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.container span {
+  color: green;
+  border-bottom: 3px solid green;
+}
+.input-box {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+
+
+.input-box input {
+  padding: 15px;
+  font-size: 15px;
+  max-width: 500px;
+  border: 0;
+  outline: 0;
+}
+.input-box img {
+  width: 30px;
+}
+.input-box img:hover{
+    cursor: pointer;
+}
+/* Generate password button */
+button {
+  padding: 10px 15px;
+  font-size: 18px;
+  background-color: green;
+  margin-top: 10px;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  
+}
+button img {
+  width: 15px;
+  margin-right: 10px;
+}
+button:hover {
+  cursor: pointer;
+}
