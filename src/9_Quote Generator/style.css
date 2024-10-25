@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins,'Courier New', Courier, monospace;
+}
+body{
+    background:linear-gradient(#800024,#9a039a,#a201a2);
+    height: 100vh;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.content{
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background: rgba(203, 200, 220, 0.8);
+    border-radius: 5px;
+}
+.quote{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.quote-btns{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    font-size: 15px;
+    color: #fff;
+    width: 150px;
+    cursor: pointer;
+}
+.quote-btn{
+    margin-top: 20px;
+}
+.new-quote{
+    background-color:#24A4F2;
+    max-width: 150px;
+}
+.share-tweet{
+    background-color: white;
+    color: #000;
+}
+.fa-twitter{
+    color: #24A4F2;
+}
