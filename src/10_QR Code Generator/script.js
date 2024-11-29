@@ -1,3 +1,5 @@
+// The API Server is currently not working :: Project unfinished
+
 const imgBox = document.getElementById("imgBox");
 const qrImage = document.getElementById("qrImage");
 const inputBox = document.getElementById("input-box");
