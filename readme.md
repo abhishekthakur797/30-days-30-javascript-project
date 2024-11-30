@@ -46,6 +46,9 @@ Here are the 11 projects I have completed so far. More will be added as I progre
 11. **Stopwatch**  
     A fully functional stopwatch with start, pause, and reset features.
 
+12. **Calculator**  
+    A fully functional calculator.
+
 ## Future Plans
 
 I plan to continue adding new projects until I reach the goal of 30 projects. Stay tuned for updates, and feel free to explore the current projects!
