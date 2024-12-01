@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="../output.css" />
+  </head>
+  <body>
+    <div
+      class="app-wrapper bg-gradient-to-r from-blue-800 to-indigo-900 text-white h-screen w-screen flex justify-center items-center"
+    >
+      <div
+        class="player-container bg-gradient-to-r from-emerald-500 to-emerald-900 p-4 w-72 h-auto flex flex-col items-center gap-y-6 rounded-xl border-r-2"
+      >
+        <div class="header-bar flex justify-between px-5 w-full">
+          <i
+            class="back-button fa-solid fa-chevron-left bg-black px-3.5 py-3 rounded-full cursor-pointer bg-white/30 hover:bg-white/50"
+          ></i>
+          <i
+            class="menu-button fa-solid fa-bars p-3 rounded-full cursor-pointer bg-white/30 hover:bg-white/50"
+          ></i>
+        </div>
+        <div class="track-info flex flex-col items-center">
+          <img
+            class="album-art w-44 rounded-lg"
+            src="img/Rockstar.jpg"
+            alt="Album Art"
+          />
+          <h1 class="track-name font-bold text-lg">Song Name</h1>
+          <h1 class="artist-name">Singer Name</h1>
+        </div>
+        <div
+          class="controls flex justify-center items-center w-full gap-2 text-xl align-middle"
+        >
+          <i
+            class="prev-button fa-solid fa-backward p-3 bg-black rounded-full cursor-pointer bg-white/30 hover:bg-white/50"
+          ></i>
+          <i
+            class="play-button fa-solid fa-play p-5 bg-black rounded-full cursor-pointer bg-white/30 hover:bg-white/50"
+          ></i>
+          <i
+            class="next-button fa-solid fa-forward p-3 bg-black rounded-full cursor-pointer bg-white/30 hover:bg-white/50"
+          ></i>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/afcdfd8069.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
