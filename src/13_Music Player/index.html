@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Music Player</title>
     <link rel="stylesheet" href="../output.css" />
+    <link rel="shortcut icon" href="img/music-94.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div
       class="app-wrapper bg-gradient-to-r from-blue-800 to-indigo-900 text-white h-screen w-screen flex justify-center items-center"
@@ -27,8 +30,20 @@
             src="img/Rockstar.jpg"
             alt="Album Art"
           />
-          <h1 class="track-name font-bold text-lg">Song Name</h1>
-          <h1 class="artist-name">Singer Name</h1>
+          <h1 class="track-name font-bold text-lg">Phir Se Ud Chala</h1>
+          <h1 class="artist-name">Mohit Chauhan</h1>
+          <audio id="song">
+            <source
+              src="audio/Phir Se Ud Chala Rockstar 320 Kbps.mp3"
+              type="audio/mpeg"
+            />
+          </audio>
+          <input
+            class="w-full h-1.5 bg-pink-500 cursor-pointer my-2 appearance-none rounded-full"
+            type="range"
+            id="progress"
+            value="0"
+          />
         </div>
         <div
           class="controls flex justify-center items-center w-full gap-2 text-xl align-middle"
@@ -37,7 +52,8 @@
             class="prev-button fa-solid fa-backward p-3 bg-black rounded-full cursor-pointer bg-white/30 hover:bg-white/50"
           ></i>
           <i
-            class="play-button fa-solid fa-play p-5 bg-black rounded-full cursor-pointer bg-white/30 hover:bg-white/50"
+            id="play-pause"
+            class="play-button fa-solid fa-play px-6 py-5 bg-black rounded-full cursor-pointer bg-white/30 hover:bg-white/50"
           ></i>
           <i
             class="next-button fa-solid fa-forward p-3 bg-black rounded-full cursor-pointer bg-white/30 hover:bg-white/50"
@@ -50,4 +66,5 @@
     src="https://kit.fontawesome.com/afcdfd8069.js"
     crossorigin="anonymous"
   ></script>
+  <script src="script.js"></script>
 </html>
