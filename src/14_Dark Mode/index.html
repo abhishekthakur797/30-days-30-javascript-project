@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhishek Thakur</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../output.css" />
+    <link
+      rel="shortcut icon"
+      href="img/profile-abhishek.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div
+      id="container"
+      class="container px-48 bg-white text-black transition-all duration-500 ease-in-out"
+    >
+      <nav class="flex justify-between pt-3 items-center">
+        <a href="#home">
+          <img src="img/profile-abhishek.png" class="w-10" alt="Icon" />
+        </a>
+        <ul class="flex justify-evenly gap-8">
+          <li><a href="#home" class="hover:text-orange-600">Home</a></li>
+          <li><a href="#about" class="hover:text-orange-600">About</a></li>
+          <li>
+            <a href="#portfolio" class="hover:text-orange-600">Portfolio</a>
+          </li>
+          <li>
+            <a href="#services" class="hover:text-orange-600">Services</a>
+          </li>
+          <li><a href="#hire-me" class="hover:text-orange-600">Hire Me</a></li>
+          <li>
+            <i
+              class="fa-solid fa-sun cursor-pointer transition-all duration-300 ease-in-out"
+              id="theme-toggle"
+            ></i>
+          </li>
+        </ul>
+      </nav>
+      <!--! Main Content Section-->
+      <div class="main-content flex items-center justify-between mt-10">
+        <div class="flex flex-col gap-3 items-start">
+          <h1 class="font-bold text-5xl">
+            I'm <span class="text-orange-600">Abhishek </span>Thakur
+          </h1>
+          <p>
+            This is my official Portfolio Website to showcase my all works
+            <br />
+            related to web development.
+          </p>
+          <button
+            class="border-2 border-orange-600 rounded-sm font-bold px-3 py-2 hover:rounded-full transition-all ease-in-out duration-300"
+          >
+            <a href="#"></a>Download CV
+          </button>
+          <div class="text-2xl cursor-pointer">
+            <i class="fab fa-linkedin hover:text-blue-600"></i>
+            <i class="fab fa-github hover:text-orange-600"></i>
+            <i class="fas fa-envelope hover:text-purple-500"></i>
+          </div>
+        </div>
+        <div class="relative px-8 h-auto overflow-hidden group cursor-cell">
+          <img
+            id="background-image"
+            class="absolute w-96 transition-transform duration-300 group-hover:-translate-x-4"
+            src="img/pattern.png"
+            alt=""
+          />
+          <img
+            id="main-image"
+            class="relative w-96 transition-transform duration-300 group-hover:translate-x-4"
+            src="img/Remove background project.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
