@@ -1,6 +1,6 @@
 // In apiKey you add your own api key for code to work.
 
-const apiKey = "API_KEY";
+const apiKey = "YOUR_API_KEY";
 const apiUrl =
   "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 

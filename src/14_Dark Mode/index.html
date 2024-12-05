@@ -21,13 +21,13 @@
   <body>
     <div
       id="container"
-      class="container px-48 bg-white text-black transition-all duration-500 ease-in-out"
+      class="container px-4 lg:px-48 bg-white text-black transition-all duration-500 ease-in-out"
     >
       <nav class="flex justify-between pt-3 items-center">
         <a href="#home">
           <img src="img/profile-abhishek.png" class="w-10" alt="Icon" />
         </a>
-        <ul class="flex justify-evenly gap-8">
+        <ul class="flex flex-col lg:flex-row justify-evenly gap-0 lg:gap-8">
           <li><a href="#home" class="hover:text-orange-600">Home</a></li>
           <li><a href="#about" class="hover:text-orange-600">About</a></li>
           <li>
@@ -46,9 +46,11 @@
         </ul>
       </nav>
       <!--! Main Content Section-->
-      <div class="main-content flex items-center justify-between mt-10">
+      <div
+        class="main-content flex flex-col lg:flex-row items-center justify-between mt-10"
+      >
         <div class="flex flex-col gap-3 items-start">
-          <h1 class="font-bold text-5xl">
+          <h1 class="font-bold text-3xl lg:text-5xl">
             I'm <span class="text-orange-600">Abhishek </span>Thakur
           </h1>
           <p>
@@ -70,13 +72,13 @@
         <div class="relative px-8 h-auto overflow-hidden group cursor-cell">
           <img
             id="background-image"
-            class="absolute w-96 transition-transform duration-300 group-hover:-translate-x-4"
+            class="absolute w-60 lg:w-96 transition-transform duration-300 group-hover:-translate-x-4"
             src="img/pattern.png"
             alt=""
           />
           <img
             id="main-image"
-            class="relative w-96 transition-transform duration-300 group-hover:translate-x-4"
+            class="relative w-52 lg:w-96 transition-transform duration-300 group-hover:translate-x-4"
             src="img/Remove background project.png"
             alt=""
           />

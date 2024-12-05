@@ -17,5 +17,3 @@ themeToggle.addEventListener("click", function () {
     themeToggle.classList.add("fa-sun");
   }
 });
-
-funcanality;
