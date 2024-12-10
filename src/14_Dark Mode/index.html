@@ -21,33 +21,82 @@
   <body>
     <div
       id="container"
-      class="container px-4 lg:px-48 bg-white text-black transition-all duration-500 ease-in-out"
+      class="container px-0 md:px-10 lg:px-48 md:w-screen bg-white text-black transition-all duration-500 ease-in-out"
     >
-      <nav class="flex justify-between pt-3 items-center">
+      <nav class="relative flex justify-between pt-2 lg:pt-3 items-center">
         <a href="#home">
-          <img src="img/profile-abhishek.png" class="w-10" alt="Icon" />
+          <img src="img/profile-abhishek.png" class="w-10 pl-4" alt="Icon" />
         </a>
-        <ul class="flex flex-col lg:flex-row justify-evenly gap-0 lg:gap-8">
-          <li><a href="#home" class="hover:text-orange-600">Home</a></li>
-          <li><a href="#about" class="hover:text-orange-600">About</a></li>
+
+        <!--! Bor Mobile Screens-->
+
+        <ul
+          id="mobile-ul"
+          class="absolute top-0 right-0 z-50 w-screen items-center flex-col bg-orange-600 hidden justify-evenly gap-4 py-4"
+        >
           <li>
+            <i
+              id="hide-menu"
+              class="fa-solid fa-xmark cursor-pointer text-white hover:font-bold"
+            ></i>
+          </li>
+          <li class="block md:hidden lg:hidden">
+            <a href="#home" class="text-white hover:font-bold">Home</a>
+          </li>
+          <li class="block md:hidden lg:hidden">
+            <a href="#about" class="text-white hover:font-bold">About</a>
+          </li>
+          <li class="block md:hidden lg:hidden">
+            <a href="#portfolio" class="text-white hover:font-bold"
+              >Portfolio</a
+            >
+          </li>
+          <li class="block md:hidden lg:hidden">
+            <a href="#services" class="text-white hover:font-bold">Services</a>
+          </li>
+          <li class="block md:hidden lg:hidden">
+            <a href="#hire-me" class="text-white hover:font-bold">Hire Me</a>
+          </li>
+        </ul>
+
+        <!--! Bor Bigger Screens-->
+
+        <ul
+          class="flex flex-row justify-evenly items-center gap-4 lg:gap-8 px-5 py-2 lg:px-0 lg:py-0 lg:bg-none"
+        >
+          <li class="hidden md:block lg:block">
+            <a href="#home" class="hover:text-orange-600">Home</a>
+          </li>
+          <li class="hidden md:block lg:block">
+            <a href="#about" class="hover:text-orange-600">About</a>
+          </li>
+          <li class="hidden md:block lg:block">
             <a href="#portfolio" class="hover:text-orange-600">Portfolio</a>
           </li>
-          <li>
+          <li class="hidden md:block lg:block">
             <a href="#services" class="hover:text-orange-600">Services</a>
           </li>
-          <li><a href="#hire-me" class="hover:text-orange-600">Hire Me</a></li>
+          <li class="hidden md:block lg:block">
+            <a href="#hire-me" class="hover:text-orange-600">Hire Me</a>
+          </li>
+          <li class="hidden md:block lg:block"></li>
           <li>
             <i
               class="fa-solid fa-sun cursor-pointer transition-all duration-300 ease-in-out"
               id="theme-toggle"
             ></i>
           </li>
+          <li>
+            <i
+              id="show-menu"
+              class="fa-solid fa-bars curswhite block md:hidden lg:hidden"
+            ></i>
+          </li>
         </ul>
       </nav>
       <!--! Main Content Section-->
       <div
-        class="main-content flex flex-col lg:flex-row items-center justify-between mt-10"
+        class="main-content px-4 lg:px-0 flex flex-col lg:flex-row items-center justify-between mt-10"
       >
         <div class="flex flex-col gap-3 items-start">
           <h1 class="font-bold text-3xl lg:text-5xl">
@@ -85,6 +134,15 @@
         </div>
       </div>
     </div>
+    <!--! footer -->
+    <footer class="bg-gray-800 text-white py-4">
+      <div class="mx-auto flex flex-col gap-1 items-center justify-between">
+        <p class="text-sm">
+          © <span id="year"></span> Abhishek. All rights reserved.
+        </p>
+        <div id="clock" class="text-sm mt-2 md:mt-0"></div>
+      </div>
+    </footer>
   </body>
   <script src="script.js"></script>
 </html>
