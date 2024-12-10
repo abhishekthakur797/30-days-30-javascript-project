@@ -82,11 +82,14 @@ Here are the 11 projects I have completed so far. More will be added as I progre
 </div>
 
 13. **Dark and Light Mode Changer**  
-    A fully functional calculator.
-
+ A fully functional calculator.
 <div style="display: flex; justify-content: space-around; align-items: center;">
-  <img src="./src/img/readme file/14_lightMode.png" alt="DESKTOP 1" style="width: 45%;"/>
-  <img src="./src/img/readme file/14_darkMode.png" alt="DESKTOP 2" style="width: 45%;"/>
+  <img src="./src/img/readme file/14_lightMode.png" alt="DESKTOP 1" style="width: 65%;"/>
+  <img src="./src/img/readme file/14_mobile-light-mode.png" alt="DESKTOP 2" style="width: 15%;"/>
+</div>
+<div style="display: flex; justify-content: space-around; align-items: center;">
+  <img src="./src/img/readme file/14_darkMode.png" alt="DESKTOP 1" style="width: 65%;"/>
+  <img src="./src/img/readme file/14_mobile-dark-mode.png" alt="DESKTOP 2" style="width: 15%;"/>
 </div>
 
 ## Future Plans
