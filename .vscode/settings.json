@@ -1,8 +1,4 @@
 {
-    "cSpell.words": [
-        "apiid",
-        "apikey",
-        "btns",
-        "contenteditable"
-    ]
+  "cSpell.words": ["apiid", "apikey", "btns", "contenteditable"],
+  "liveServer.settings.port": 5501
 }

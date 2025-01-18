@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 Days JS Project</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="shortcut icon"
+      href="img/icons8-javascript-144.png"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <div class="relative">
+      <!--! Navbar -->
+      <!--! Navbar for Desktop-->
+      <nav
+        class="desktop-nav w-screen fixed py-2 bg-purple-600 text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.1)]"
+      >
+        <div
+          class="navbar-container flex flex-row justify-around lg:justify-evenly md:justify-evenly items-center font-semibold"
+        >
+          <a href="#"
+            ><i
+              class="fa-brands fa-js text-yellow-400 hover:text-yellow-300 text-4xl ml-10 md:ml-0 lg:ml-0"
+            ></i
+          ></a>
+          <div class="desktop-menu hidden md:block lg:block">
+            <ul class="flex gap-x-8 text-xl">
+              <li class="hover:text-yellow-300"><a href="#">Home</a></li>
+              <li class="hover:text-yellow-300"><a href="#">Portfolio</a></li>
+              <li class="hover:text-yellow-300"><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <ul>
+            <i
+              id="theme-toggle"
+              class="far fa-moon cursor-pointer text-2xl ml-52 mr-5 md:ml-0 lg:ml-0"
+            ></i>
+          </ul>
+          <!--! Navbar for Mobile-->
+
+          <i
+            id="hamburgerMenu"
+            class="fa-solid fa-bars cursor-pointer text-2xl block md:hidden lg:hidden mr-6 md:mr-0 lg:mr-0"
+          ></i>
+          <div id="mobile-menu" class="mobile-menu hidden">
+            <ul
+              class="flex flex-col absolute text-center text-xl w-screen bg-purple-600 top-0 right-0 z-50 gap-y-5 py-5 lg:hidden md:hidden"
+            >
+              <i id="hide-menu" class="fa-solid fa-xmark cursor-pointer"></i>
+              <li class="hover:text-yellow-300"><a href="#">Home</a></li>
+              <li class="hover:text-yellow-300"><a href="#">Portfolio</a></li>
+              <li class="hover:text-yellow-300"><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!--! Navbar for Mobile-->
+      <!-- <nav
+      class="mobile-nav w-screen absolute py-2 px-2 bg-purple-600 text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.1)] block md:hidden lg:hidden">
+      <div class="navbar-container flex flex-row justify-evenly items-center font-semibold">
+        <a href="#"><i class="fa-brands fa-js text-yellow-400 hover:text-yellow-300 text-4xl"></i></a>
+        <ul class="flex gap-x-4 items-center ml-52  text-xl">
+          <i id="theme-toggle-mobile" class="far fa-moon cursor-pointer text-2xl"></i>
+          <i class="fa-solid fa-bars cursor-pointer "></i>
+          <div class="mobile-nav-col hidden"><div class="bg-teal-600 flex flex-col items-center">
+            <li></li>
+            <i id="hide-menu" class="fa-solid fa-xmark cursor-pointer  hover:font-bold"></i>
+            </li>
+            <li class=""><a href="#">Home</a></li>
+            <li class=""><a href="#">Portfolio</a></li>
+            <li class=""><a href="#">Contact</a></li>
+          </div></div>
+        </ul>
+      
+      </div>
+    </nav> -->
+
+      <!--! Main Container-->
+      <div
+        id="body-container"
+        class="px-8 w-screen h-full bg-white text-black pt-16"
+      >
+        <h1 class="font-bold text-4xl py-4 text-center">
+          30 days 30 Javascript Projects
+        </h1>
+        <!--! Container Box-->
+        <div
+          class="main-container-box grid grid-cols-4 justify-items-center gap-y-20 mt-5 p-10 shadow-2xl"
+        >
+          <!--! Content 1-->
+          <div
+            class="card-container flex flex-col items-center text-center gap-4 py-6 rounded-lg w-64 h-40 shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]"
+          >
+            <h3 class="card-title text-xl font-bold">
+              Random Password Generator
+            </h3>
+            <!-- <img
+              src="img/random password.png"
+              class="card-image w-28 rounded-md shadow-md border-2"
+              alt="Random Password Generator Preview"
+            /> -->
+            <button
+              class="border-2 border-green-600 text-green-700 font-semibold px-3 py-2 rounded-md hover:bg-green-600 hover:text-white hover:scale-105 transition-all duration-300"
+            >
+              <a href="src/6_Random Password Generator/index.html"
+                >Open Project</a
+              >
+            </button>
+          </div>
+          <!--! Content 1-->
+          <div
+            class="card-container flex flex-col items-center text-center gap-4 px-6 py-6 rounded-lg w-64 shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]"
+          >
+            <h3 class="card-title text-xl font-bold">
+              Random Password Generator
+            </h3>
+            <img
+              src="img/random password.png"
+              class="card-image w-52 h-44 rounded-md shadow-md border-2"
+              alt="Random Password Generator Preview"
+            />
+            <button
+              class="border-2 border-green-600 text-green-700 font-semibold px-3 py-2 rounded-md hover:bg-green-600 hover:text-white hover:scale-105 transition-all duration-300"
+            >
+              <a href="src/6_Random Password Generator/index.html"
+                >Open Project</a
+              >
+            </button>
+          </div>
+          <!--! Content 1-->
+          <div
+            class="card-container flex flex-col items-center text-center gap-4 px-6 py-6 rounded-lg w-64 shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]"
+          >
+            <h3 class="card-title text-xl font-bold">
+              Random Password Generator
+            </h3>
+            <img
+              src="img/random password.png"
+              class="card-image w-52 h-44 rounded-md shadow-md border-2"
+              alt="Random Password Generator Preview"
+            />
+            <button
+              class="border-2 border-green-600 text-green-700 font-semibold px-3 py-2 rounded-md hover:bg-green-600 hover:text-white hover:scale-105 transition-all duration-300"
+            >
+              <a href="src/6_Random Password Generator/index.html"
+                >Open Project</a
+              >
+            </button>
+          </div>
+          <!--! Content 1-->
+          <div
+            class="card-container flex flex-col items-center text-center gap-4 px-6 py-6 rounded-lg w-64 shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]"
+          >
+            <h3 class="card-title text-xl font-bold">
+              Random Password Generator
+            </h3>
+            <img
+              src="img/random password.png"
+              class="card-image w-52 h-44 rounded-md shadow-md border-2"
+              alt="Random Password Generator Preview"
+            />
+            <button
+              class="border-2 border-green-600 text-green-700 font-semibold px-3 py-2 rounded-md hover:bg-green-600 hover:text-white hover:scale-105 transition-all duration-300"
+            >
+              <a href="src/6_Random Password Generator/index.html"
+                >Open Project</a
+              >
+            </button>
+          </div>
+          <!--! Content 1-->
+          <div
+            class="card-container flex flex-col items-center text-center gap-4 px-6 py-6 rounded-lg w-64 shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]"
+          >
+            <h3 class="card-title text-xl font-bold">
+              Random Password Generator
+            </h3>
+            <img
+              src="img/random password.png"
+              class="card-image w-52 h-44 rounded-md shadow-md border-2"
+              alt="Random Password Generator Preview"
+            />
+            <button
+              class="border-2 border-green-600 text-green-700 font-semibold px-3 py-2 rounded-md hover:bg-green-600 hover:text-white hover:scale-105 transition-all duration-300"
+            >
+              <a href="src/6_Random Password Generator/index.html"
+                >Open Project</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js"></script>
+</html>
