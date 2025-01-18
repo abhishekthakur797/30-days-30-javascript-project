@@ -36,7 +36,9 @@
           <div class="desktop-menu hidden md:block lg:block">
             <ul class="flex gap-x-8 text-xl">
               <li class="hover:text-yellow-300"><a href="#">Home</a></li>
-              <li class="hover:text-yellow-300"><a href="#">Portfolio</a></li>
+              <li class="hover:text-yellow-300">
+                <a href="https://tinyurl.com/abhishek-protfolio">Portfolio</a>
+              </li>
               <li class="hover:text-yellow-300"><a href="#">Contact</a></li>
             </ul>
           </div>
@@ -58,8 +60,10 @@
             >
               <i id="hide-menu" class="fa-solid fa-xmark cursor-pointer"></i>
               <li class="hover:text-yellow-300"><a href="#">Home</a></li>
-              <li class="hover:text-yellow-300"><a href="#">Portfolio</a></li>
-              <li class="hover:text-yellow-300"><a href="#">Contact</a></li>
+              <li class="hover:text-yellow-300">
+                <a href="https://tinyurl.com/abhishek-protfolio">Portfolio</a>
+              </li>
+              <li class="hover:text-yellow-300"><a href="#">R</a></li>
             </ul>
           </div>
         </div>
@@ -89,14 +93,14 @@
       <!--! Main Container-->
       <div
         id="body-container"
-        class="px-8 w-screen h-full bg-white text-black pt-16"
+        class="px-8 w-screen h-full bg-white text-black pt-20"
       >
-        <h1 class="font-bold text-4xl py-4 text-center">
+        <h1 class="font-bold text-4xl md:text-5xl lg:text-5xl text-center">
           30 days 30 Javascript Projects
         </h1>
         <!--! Container Box-->
         <div
-          class="main-container-box grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 justify-items-center place-items-center gap-y-20 mt-5 p-10"
+          class="main-container-box grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 justify-items-center place-items-center gap-y-8 md:gap-y-16 lg:gap-y-16 mt-5 p-10"
         >
           <!--! Content 1-->
           <div
@@ -237,9 +241,9 @@
           <div
             class="card-container flex flex-col items-center justify-center text-center gap-4 py-2 rounded-lg w-64 h-48 shadow-[1px_1px_0px_2px_#ed64a6]"
           >
-            <h3 class="card-title text-xl font-bold">QR Code Generator</h3>
+            <h3 class="card-title text-xl font-bold">BG Color Changer</h3>
             <div class="rounded-full">
-              <i class="fa-solid fa-qrcode text-4xl"></i>
+              <i class="fa-solid fa-palette text-4xl"></i>
             </div>
             <!-- <img
               src="img/random password.png"
@@ -249,7 +253,7 @@
             <button
               class="border-2 border-green-600 text-green-700 font-semibold px-3 py-2 rounded-md hover:bg-green-600 hover:text-white hover:scale-105 transition-all duration-300"
             >
-              <a href="src/10_QR Code Generator/index.html">Open Project</a>
+              <a href="src/bgColorChanger/index.html">Open Project</a>
             </button>
           </div>
           <!--! Content 9-->
@@ -292,6 +296,17 @@
           </div>
         </div>
       </div>
+      <!--! footer -->
+      <footer
+        class="py-4 bg-gradient-to-bl from-[#0f172a] via-[#1e1a78] to-[#0f172a] text-white"
+      >
+        <div class="mx-auto flex flex-col gap-1 items-center justify-between">
+          <p class="text-sm">
+            © <span id="year"></span> Abhishek. All rights reserved.
+          </p>
+          <div id="clock" class="text-sm mt-2 md:mt-0"></div>
+        </div>
+      </footer>
     </div>
   </body>
   <script src="https://cdn.tailwindcss.com"></script>

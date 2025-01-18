@@ -38,3 +38,16 @@ closeMenu.addEventListener("click", function () {
     mobileMenu.classList.add("hidden");
   }
 });
+
+// script for current time in footer
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Function to display the real-time clock
+function updateClock() {
+  const now = new Date();
+  const timeString = now.toLocaleTimeString();
+  document.getElementById("clock").textContent = `Current Time: ${timeString}`;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
