@@ -1,47 +1,47 @@
+const displayTime = document.getElementById("displayTime");
+const startBtn = document.getElementById("start");
+const stopBtn = document.getElementById("stop");
+const resetBtn = document.getElementById("reset");
+
 let [seconds, minutes, hours] = [0, 0, 0];
-let displayTime = document.getElementById("displayTime");
 let timer = null;
 
-function stopwatch() {
+// Add a leading zero: 5 -> "05"
+const pad = (value) => String(value).padStart(2, "0");
+
+function updateDisplay() {
+  displayTime.textContent = `${pad(hours)} : ${pad(minutes)} : ${pad(seconds)}`;
+}
+
+function tick() {
   seconds++;
-  if (seconds == 60) {
+  if (seconds === 60) {
     seconds = 0;
     minutes++;
-    if (minutes == 60) {
-      minutes = 0;
-      hours++;
-    }
   }
-
-  let h = hours < 10 ? "0" + hours : hours;
-  let m = minutes < 10 ? "0" + minutes : minutes;
-  let s = seconds < 10 ? "0" + seconds : seconds;
-
-  displayTime.innerHTML = `${h} : ${m} : ${s}`;
+  if (minutes === 60) {
+    minutes = 0;
+    hours++;
+  }
+  updateDisplay();
 }
 
 function watchStart() {
-  if (timer != null) {
-    clearInterval(timer);
-  }
-  timer = setInterval(stopwatch, 1000);
+  if (timer) return; // already running
+  timer = setInterval(tick, 1000);
 }
 
-let start = document.getElementById("start");
-start.addEventListener("click", function () {
-  watchStart();
-});
-
-// code for watch to reset and stop
-
-let stop = document.getElementById("stop");
-stop.addEventListener("click", function watchStop() {
+function watchStop() {
   clearInterval(timer);
-});
+  timer = null;
+}
 
-let reset = document.getElementById("reset");
-reset.addEventListener("click", function watchReset() {
-  clearInterval(timer);
+function watchReset() {
+  watchStop();
   [seconds, minutes, hours] = [0, 0, 0];
-  displayTime.innerHTML = "00 : 00 : 00";
-});
+  updateDisplay();
+}
+
+startBtn.addEventListener("click", watchStart);
+stopBtn.addEventListener("click", watchStop);
+resetBtn.addEventListener("click", watchReset);

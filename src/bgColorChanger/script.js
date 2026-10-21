@@ -1,22 +1,11 @@
-const container = document.querySelector(".container");
-const buttons = document.querySelectorAll(".button-colors button");
+const buttonBar = document.getElementById("color-buttons");
+let currentColor = "bg-black";
 
-buttons.forEach((button) => {
-  button.addEventListener("click", function () {
-    container.classList.remove(
-      "bg-black",
-      "bg-green-600",
-      "bg-blue-600",
-      "bg-red-600",
-      "bg-yellow-500",
-      "bg-purple-600",
-      "bg-pink-500",
-      "bg-teal-500",
-      "bg-orange-600",
-      "bg-gray-700",
-      "bg-indigo-600"
-    );
-    const newColor = button.classList[0];
-    container.classList.add(newColor);
-  });
+// One click listener on the bar handles every button.
+buttonBar.addEventListener("click", (event) => {
+  const button = event.target.closest("button");
+  if (!button) return;
+
+  document.body.classList.replace(currentColor, button.dataset.color);
+  currentColor = button.dataset.color;
 });

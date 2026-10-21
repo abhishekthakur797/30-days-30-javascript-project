@@ -1,9 +1,12 @@
 const main = document.querySelector("#main");
 const cursor = document.querySelector(".cursor");
 
-// Cursor needs 'position: absolute' or 'fixed' in CSS to move with mouse
-main.addEventListener("mousemove", function (count) {
-  // Set the 'left' and 'top' positions of the cursor to match the mouse x and y coordinates
-  cursor.style.left = count.x + "px";
-  cursor.style.top = count.y + "px";
+// The cursor is position: fixed in CSS, so we can move it with left/top.
+main.addEventListener("mousemove", (event) => {
+  cursor.style.left = `${event.clientX}px`;
+  cursor.style.top = `${event.clientY}px`;
 });
+
+// Hide the dot when the mouse leaves the window.
+main.addEventListener("mouseleave", () => (cursor.style.opacity = 0));
+main.addEventListener("mouseenter", () => (cursor.style.opacity = 1));

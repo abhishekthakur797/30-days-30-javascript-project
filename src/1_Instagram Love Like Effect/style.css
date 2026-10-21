@@ -1,47 +1,64 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 html,
 body {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
+
 body {
-    background: rgb(255, 75, 0);
-    background: radial-gradient(circle, rgba(255, 75, 0, 1) 0%, rgba(255, 122, 1, 1) 35%, rgba(255, 169, 0, 1) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: radial-gradient(circle, #ff4b00 0%, #ff7a01 35%, #ffa900 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
 }
+
 #container {
-    height: 500px;
-    width: 300px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    position: relative;
-    /*! Understand this*/
-    overflow: hidden;
+  height: 500px;
+  width: 300px;
+  max-width: 90vw;
+  border-radius: 12px;
+  position: relative;
+  /* Keeps the scaled heart from spilling outside the card */
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  user-select: none;
 }
+
 #container img {
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-    object-position: right center;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
 }
+
 #container i {
-    color: white;
-    font-size: 60px;
-    /* Centers the element on the page using absolute positioning. 
-   Ensure the parent element has relative positioning for proper alignment. */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    /* it will perfectly position into center */
-    /* scale it will change the size  */
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 0.7;
-    transition: transform ease 0.4s;
+  color: white;
+  font-size: 80px;
+  /* Centered using absolute positioning; the parent is position: relative */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+  pointer-events: none;
+}
+
+.hint {
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }

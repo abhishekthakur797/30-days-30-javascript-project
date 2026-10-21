@@ -18,7 +18,7 @@
       type="image/x-icon"
     />
   </head>
-  <body class="body overflow-x-hidden bg-white text-black">
+  <body class="overflow-x-hidden bg-white text-black transition-colors duration-500">
     <div
       id="container"
       class="container mx-auto md:px-10 lg:px-48 w-full transition-all duration-500 ease-in-out"
@@ -105,15 +105,15 @@
             <br />
             related to web development.
           </p>
-          <button
+          <a
+            href="#"
             class="border-2 border-orange-600 rounded-sm font-bold px-3 py-2 hover:rounded-full transition-all ease-in-out duration-300"
+            >Download CV</a
           >
-            <a href="#">Download CV</a>
-          </button>
-          <div class="text-2xl cursor-pointer">
-            <i class="fab fa-linkedin hover:text-blue-600"></i>
-            <i class="fab fa-github hover:text-orange-600"></i>
-            <i class="fas fa-envelope hover:text-purple-500"></i>
+          <div class="flex gap-3 text-2xl">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin hover:text-blue-600"></i></a>
+            <a href="https://github.com/abhishekthakur797" aria-label="GitHub"><i class="fab fa-github hover:text-orange-600"></i></a>
+            <a href="#" aria-label="Email"><i class="fas fa-envelope hover:text-purple-500"></i></a>
           </div>
         </div>
 
@@ -123,12 +123,13 @@
             class="absolute w-60 lg:w-96 max-w-full transition-transform duration-300 group-hover:-translate-x-4"
             src="img/pattern.png"
             alt=""
+            aria-hidden="true"
           />
           <img
             id="main-image"
             class="relative w-52 lg:w-96 max-w-full transition-transform duration-300 group-hover:translate-x-4"
             src="img/Remove background project.png"
-            alt=""
+            alt="Abhishek Thakur"
           />
         </div>
       </div>

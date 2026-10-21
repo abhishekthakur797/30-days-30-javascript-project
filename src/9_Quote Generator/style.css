@@ -1,53 +1,88 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: poppins,'Courier New', Courier, monospace;
-}
-body{
-    background:linear-gradient(#800024,#9a039a,#a201a2);
-    height: 100vh;
-}
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.content{
-    width: 100%;
-    max-width: 500px;
-    padding: 20px;
-    background: rgba(203, 200, 220, 0.8);
-    border-radius: 5px;
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #800024, #9a039a, #a201a2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
-.quote{
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+.content {
+  width: 100%;
+  max-width: 560px;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
-.quote-btns{
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: 0;
-    outline: 0;
-    font-size: 15px;
-    color: #fff;
-    width: 150px;
-    cursor: pointer;
+
+.content h1 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 25px;
+  position: relative;
 }
-.quote-btn{
-    margin-top: 20px;
+
+.content h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 10px auto 0;
+  background: #9a039a;
+  border-radius: 2px;
 }
-.new-quote{
-    background-color:#24A4F2;
-    max-width: 150px;
+
+#quote {
+  font-size: 22px;
+  color: #333;
+  min-height: 80px;
+  line-height: 1.5;
 }
-.share-tweet{
-    background-color: white;
-    color: #000;
+
+#author {
+  margin: 20px 0 30px;
+  font-style: italic;
+  color: #666;
 }
-.fa-twitter{
-    color: #24A4F2;
+
+.quote-btns {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.quote-btns button {
+  width: 150px;
+  padding: 12px 20px;
+  font-size: 15px;
+  border-radius: 30px;
+  outline: 0;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.quote-btns button:hover {
+  transform: translateY(-2px);
+}
+
+.new-quote {
+  background: #9a039a;
+  color: #fff;
+  border: 2px solid #9a039a;
+}
+
+.share-tweet {
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
 }

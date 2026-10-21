@@ -1,18 +1,15 @@
-var con = document.querySelector("#container");
-var love = document.querySelector("i");
+const container = document.querySelector("#container");
+const heart = document.querySelector("#container i");
+let hideTimer = null;
 
-con.addEventListener("dblclick", function () {
-  console.log("Jai Shree Ram");
-  love.style.opacity = 0.7;
-  love.style.transform = "translate(-50%, -50%) scale(1)";
+// Show the heart on double-click (or double-tap on mobile), then hide it again.
+container.addEventListener("dblclick", () => {
+  clearTimeout(hideTimer);
+  heart.style.opacity = 0.8;
+  heart.style.transform = "translate(-50%, -50%) scale(1)";
 
-  setTimeout(() => {
-    love.style.transform = "translate(-50%, -50%) scale(0)";
-    love.style.opacity = 0;
-  }, 2000);
+  hideTimer = setTimeout(() => {
+    heart.style.transform = "translate(-50%, -50%) scale(0)";
+    heart.style.opacity = 0;
+  }, 1200);
 });
-
-// setTimeOut :: Delay.
-// setTimeout(() => {
-//   console.log("hey");
-// }, 3000);

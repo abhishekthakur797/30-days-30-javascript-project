@@ -4,67 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Music Player</title>
-    <link rel="stylesheet" href="../output.css" />
     <link rel="shortcut icon" href="img/music-94.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../output.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
-    <div
-      class="app-wrapper bg-gradient-to-r from-blue-800 to-indigo-900 text-white h-screen w-screen flex justify-center items-center"
-    >
-      <div
-        class="player-container bg-gradient-to-r from-emerald-500 to-emerald-900 p-4 w-72 h-auto flex flex-col items-center gap-y-6 rounded-xl border-r-2"
-      >
-        <div class="header-bar flex justify-between px-5 w-full">
-          <i
-            class="back-button fa-solid fa-chevron-left bg-black px-3.5 py-3 rounded-full cursor-pointer bg-white/30 hover:bg-white/50"
-          ></i>
-          <i
-            class="menu-button fa-solid fa-bars p-3 rounded-full cursor-pointer bg-white/30 hover:bg-white/50"
-          ></i>
-        </div>
-        <div class="track-info flex flex-col items-center">
-          <img
-            class="album-art w-44 rounded-lg"
-            src="img/Rockstar.jpg"
-            alt="Album Art"
-          />
-          <h1 class="track-name font-bold text-lg">Phir Se Ud Chala</h1>
-          <h1 class="artist-name">Mohit Chauhan</h1>
-          <audio id="song">
-            <source
-              src="audio/Phir Se Ud Chala Rockstar 320 Kbps.mp3"
-              type="audio/mpeg"
-            />
-          </audio>
-          <input
-            class="w-full h-1.5 bg-pink-500 cursor-pointer my-2 appearance-none rounded-full"
-            type="range"
-            id="progress"
-            value="0"
-          />
-        </div>
-        <div
-          class="controls flex justify-center items-center w-full gap-2 text-xl align-middle"
+  <body class="flex min-h-screen items-center justify-center bg-gradient-to-r from-blue-800 to-indigo-900 p-4 text-white">
+    <div class="flex w-80 flex-col items-center gap-6 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-900 p-6 shadow-2xl">
+      <div class="flex w-full justify-between">
+        <a
+          href="../../index.html"
+          aria-label="Back to projects"
+          class="flex h-11 w-11 items-center justify-center rounded-full bg-white/30 hover:bg-white/50"
         >
-          <i
-            class="prev-button fa-solid fa-backward p-3 bg-black rounded-full cursor-pointer bg-white/30 hover:bg-white/50"
-          ></i>
-          <i
-            id="play-pause"
-            class="play-button fa-solid fa-play px-6 py-5 bg-black rounded-full cursor-pointer bg-white/30 hover:bg-white/50"
-          ></i>
-          <i
-            class="next-button fa-solid fa-forward p-3 bg-black rounded-full cursor-pointer bg-white/30 hover:bg-white/50"
-          ></i>
+          <i class="fa-solid fa-chevron-left"></i>
+        </a>
+        <button
+          id="mute"
+          aria-label="Mute"
+          class="flex h-11 w-11 items-center justify-center rounded-full bg-white/30 hover:bg-white/50"
+        >
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+      </div>
+
+      <div class="flex w-full flex-col items-center">
+        <img class="mb-4 w-48 rounded-xl shadow-lg" src="img/Rockstar.jpg" alt="Rockstar album art" />
+        <h1 class="text-lg font-bold">Phir Se Ud Chala</h1>
+        <p class="text-sm text-white/80">Mohit Chauhan</p>
+
+        <audio id="song" src="audio/Phir Se Ud Chala Rockstar 320 Kbps.mp3" preload="metadata"></audio>
+
+        <input id="progress" type="range" value="0" min="0" step="0.1" aria-label="Seek" class="mt-5 w-full cursor-pointer" />
+        <div class="mt-1 flex w-full justify-between text-xs text-white/80">
+          <span id="current-time">0:00</span>
+          <span id="duration">0:00</span>
         </div>
       </div>
+
+      <div class="flex items-center justify-center gap-4 text-xl">
+        <button
+          id="rewind"
+          aria-label="Back 10 seconds"
+          class="flex h-12 w-12 items-center justify-center rounded-full bg-white/30 hover:bg-white/50"
+        >
+          <i class="fa-solid fa-backward"></i>
+        </button>
+        <button
+          id="play-pause"
+          aria-label="Play"
+          class="flex h-16 w-16 items-center justify-center rounded-full bg-white/30 text-2xl hover:bg-white/50"
+        >
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button
+          id="forward"
+          aria-label="Forward 10 seconds"
+          class="flex h-12 w-12 items-center justify-center rounded-full bg-white/30 hover:bg-white/50"
+        >
+          <i class="fa-solid fa-forward"></i>
+        </button>
+      </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
-  <script
-    src="https://kit.fontawesome.com/afcdfd8069.js"
-    crossorigin="anonymous"
-  ></script>
-  <script src="script.js"></script>
 </html>

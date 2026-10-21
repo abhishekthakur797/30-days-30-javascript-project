@@ -3,150 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>calculator</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="../output.css" />
   </head>
-  <body>
-    <div
-      class="container h-screen max-w-screen flex justify-center items-center bg-gradient-to-tl from-[#15803d] via-[#115e59] to-[#164e63] text-white"
-    >
-      <div class="calculator bg-gray-800 py-8 px-3 text-2xl rounded-md">
-        <form class="flex flex-col">
-          <div class="display">
-            <input
-              class="bg-gray-800/50 py-4 font-bold text-2xl"
-              type="text"
-              name="display"
-              id=""
-            />
-          </div>
-          <div class="grid grid-cols-4 my-2 gap-2">
-            <input
-              class="border-2 border-blue-400/50 rounded-md px-1 py-2 bg-gray-700/50 hover:bg-gray-800 cursor-pointer text-blue-500 font-bold"
-              type="button"
-              value="AC"
-              onclick="display.value=''"
-            />
-            <input
-              class="border-2 border-blue-400/50 rounded-md px-1 py-2 bg-gray-700/50 hover:bg-gray-800 cursor-pointer text-blue-500 font-bold"
-              type="button"
-              value="DE"
-              onclick="display.value=display.value.toString().slice(0,-1)"
-            />
-            <input
-              class="border-2 border-blue-400/50 rounded-md px-1 py-2 bg-gray-700/50 hover:bg-gray-800 cursor-pointer text-blue-500 font-bold"
-              type="button"
-              value="."
-              onclick="display.value+='.'"
-            />
-            <input
-              class="border-2 border-blue-400/50 rounded-md px-1 py-2 bg-gray-700/50 hover:bg-gray-800 cursor-pointer text-blue-500 font-bold"
-              type="button"
-              value="/"
-              onclick="display.value+='/'"
-            />
-          </div>
-          <div class="grid grid-cols-4 my-2 gap-2">
-            <input
-              class="border-2 border-blue-400/50 rounded-md px-1 py-2 bg-gray-700/50 hover:bg-gray-800 cursor-pointer"
-              type="button"
-              value="7"
-              onclick="display.value+='7'"
-            />
-            <input
-              class="border-2 border-blue-400/50 rounded-md px-1 py-2 bg-gray-700/50 hover:bg-gray-800 cursor-pointer"
-              type="button"
-              value="8"
-              onclick="display.value+='8'"
-            />
-            <input
-              class="border-2 border-blue-400/50 rounded-md px-1 py-2 bg-gray-700/50 hover:bg-gray-800 cursor-pointer"
-              type="button"
-              value="9"
-              onclick="display.value+='9'"
-            />
-            <input
-              class="border-2 border-blue-400/50 rounded-md px-1 py-2 bg-gray-700/50 hover:bg-gray-800 cursor-pointer text-blue-500 font-bold"
-              type="button"
-              value="*"
-              onclick="display.value+='*'"
-            />
-          </div>
-          <div class="grid grid-cols-4 my-2 gap-2">
-            <input
-              class="border-2 border-blue-400/50 rounded-md px-1 py-2 bg-gray-700/50 hover:bg-gray-800 cursor-pointer"
-              type="button"
-              value="4"
-              onclick="display.value+='4'"
-            />
-            <input
-              class="border-2 border-blue-400/50 rounded-md px-1 py-2 bg-gray-700/50 hover:bg-gray-800 cursor-pointer"
-              type="button"
-              value="5"
-              onclick="display.value+='5'"
-            />
-            <input
-              class="border-2 border-blue-400/50 rounded-md px-1 py-2 bg-gray-700/50 hover:bg-gray-800 cursor-pointer"
-              type="button"
-              value="6"
-              onclick="display.value+='6'"
-            />
-            <input
-              class="border-2 border-blue-400/50 rounded-md px-1 py-2 bg-gray-700/50 hover:bg-gray-800 cursor-pointer text-blue-500 font-bold"
-              type="button"
-              value="-"
-              onclick="display.value+='-'"
-            />
-          </div>
-          <div class="grid grid-cols-4 my-2 gap-2">
-            <input
-              class="border-2 border-blue-400/50 rounded-md px-1 py-2 bg-gray-700/50 hover:bg-gray-800 cursor-pointer"
-              type="button"
-              value="1"
-              onclick="display.value+='1'"
-            />
-            <input
-              class="border-2 border-blue-400/50 rounded-md px-1 py-2 bg-gray-700/50 hover:bg-gray-800 cursor-pointer"
-              type="button"
-              value="2"
-              onclick="display.value+='2'"
-            />
-            <input
-              class="border-2 border-blue-400/50 rounded-md px-1 py-2 bg-gray-700/50 hover:bg-gray-800 cursor-pointer"
-              type="button"
-              value="3"
-              onclick="display.value+='3'"
-            />
-            <input
-              class="border-2 border-blue-400/50 rounded-md px-1 py-2 bg-gray-700/50 hover:bg-gray-800 cursor-pointer text-blue-500 font-bold"
-              type="button"
-              value="+"
-              onclick="display.value+='+'"
-            />
-          </div>
-          <div class="grid grid-cols-4 my-2 gap-2">
-            <input
-              class="border-2 border-blue-400/50 rounded-md px-1 py-2 bg-gray-700/50 hover:bg-gray-800 cursor-pointer col-span-1"
-              type="button"
-              value="00"
-              onclick="display.value+='00'"
-            />
-            <input
-              class="border-2 border-blue-400/50 rounded-md px-1 py-2 bg-gray-700/50 hover:bg-gray-800 cursor-pointer col-span-1"
-              type="button"
-              value="0"
-              onclick="display.value+='0'"
-            />
-            <input
-              class="equal border-2 border-blue-400/50 rounded-md px-1 py-2 bg-gray-700/50 hover:bg-gray-800 cursor-pointer text-blue-500 font-bold col-span-2"
-              type="button"
-              value="="
-              onclick="display.value=eval(display.value)"
-            />
-          </div>
-        </form>
+  <body
+    class="flex min-h-screen items-center justify-center bg-gradient-to-tl from-[#15803d] via-[#115e59] to-[#164e63] p-4 text-white"
+  >
+    <div class="w-full max-w-xs rounded-2xl bg-gray-800 p-5 shadow-2xl">
+      <input
+        id="display"
+        type="text"
+        readonly
+        aria-label="Result"
+        class="mb-4 w-full rounded-lg bg-gray-900/60 px-4 py-5 text-right text-3xl font-bold outline-none"
+      />
+
+      <!-- .key / .op styles live in src/input.css. data-value is the character added to the display. -->
+      <div id="keys" class="grid grid-cols-4 gap-3 text-xl">
+        <button class="key op" data-action="clear">AC</button>
+        <button class="key op" data-action="delete">DE</button>
+        <button class="key op" data-value=".">.</button>
+        <button class="key op" data-value="/">÷</button>
+
+        <button class="key" data-value="7">7</button>
+        <button class="key" data-value="8">8</button>
+        <button class="key" data-value="9">9</button>
+        <button class="key op" data-value="*">×</button>
+
+        <button class="key" data-value="4">4</button>
+        <button class="key" data-value="5">5</button>
+        <button class="key" data-value="6">6</button>
+        <button class="key op" data-value="-">−</button>
+
+        <button class="key" data-value="1">1</button>
+        <button class="key" data-value="2">2</button>
+        <button class="key" data-value="3">3</button>
+        <button class="key op" data-value="+">+</button>
+
+        <button class="key" data-value="00">00</button>
+        <button class="key" data-value="0">0</button>
+        <button class="key col-span-2 bg-blue-600 hover:bg-blue-700" data-action="equals">=</button>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>

@@ -2,96 +2,110 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: poppins, "san-serif";
+  font-family: "Poppins", sans-serif;
 }
+
 body {
-  background-color: rgb(28, 28, 50);
+  background-color: #1c1c32;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
+
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 600px;
-  margin: 12%;
-  padding: 5px;
 }
+
 .container h1 {
   color: white;
+  font-size: 42px;
   font-weight: 600;
-  margin-bottom: 5px;
+  line-height: 1.3;
+  margin-bottom: 30px;
 }
-.container span {
-  color: green;
-  border-bottom: 3px solid green;
+
+.container h1 span {
+  color: #019f55;
+  border-bottom: 4px solid #019f55;
+  padding-bottom: 4px;
 }
+
 .input-box {
-  margin-top: 10px;
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: white;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0px 10px;
+  background-color: white;
+  border-radius: 6px;
+  padding: 10px 20px;
 }
-
 
 .input-box input {
-  padding: 15px;
-  font-size: 15px;
-  max-width: 500px;
+  flex: 1;
+  min-width: 0;
+  padding: 10px 0;
+  font-size: 22px;
+  letter-spacing: 1px;
   border: 0;
   outline: 0;
 }
-.input-box img {
+
+.icon-btn {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.icon-btn img {
   width: 30px;
+  display: block;
 }
-.input-box img:hover{
-    cursor: pointer;
+
+.icon-btn:hover {
+  opacity: 0.7;
 }
-/* Generate password button */
-button {
-  padding: 10px 15px;
-  font-size: 18px;
-  background-color: green;
+
+#message {
+  color: #9aeabc;
+  font-size: 14px;
+  min-height: 22px;
+  margin-top: 8px;
+}
+
+.generate-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 26px;
   margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  background-color: #019f55;
   border: 0;
   outline: 0;
-  border-radius: 5px;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  
-}
-button img {
-  width: 15px;
-  margin-right: 10px;
-}
-button:hover {
+  border-radius: 6px;
   cursor: pointer;
 }
 
-
-/* For tablets and smaller laptops */
-@media (max-width: 768px) {
-  .container {
-    margin: 2%;
-  }
+.generate-btn:hover {
+  background-color: #018848;
 }
 
-/* For mobile devices */
-@media (max-width: 480px) {
-  .container {
-    margin: 3%;
-  }
-  .container h1{
-    font-size: 30px;
+.generate-btn img {
+  width: 20px;
+}
 
+@media (max-width: 480px) {
+  .container h1 {
+    font-size: 30px;
   }
+
   .input-box input {
-    padding: 10px;
-    font-size: 15px;
-    max-width: 300px;
-    border: 0;
-    outline: 0;
+    font-size: 17px;
   }
 }

@@ -3,49 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bg Color Changer</title>
+    <title>BG Color Changer</title>
     <link rel="stylesheet" href="../output.css" />
   </head>
-  <body>
+  <body class="min-h-screen bg-black transition-colors duration-300">
     <div
-      class="container bg-black duration-200 text-white h-screen min-w-full flex justify-center"
+      id="color-buttons"
+      class="fixed bottom-10 left-1/2 flex w-max max-w-[90vw] -translate-x-1/2 flex-wrap justify-center gap-2 rounded-xl bg-white px-3 py-2 text-white shadow-lg"
     >
-      <div
-        class="button-colors px-3 py-2 flex flex-wrap justify-center align-middle items-center gap-2 fixed bottom-10 bg-white rounded-lg"
-      >
-        <button class="bg-green-600 px-2 py-1 lg:px-4 lg:py-2 rounded">
-          Green
-        </button>
-        <button class="bg-blue-600 px-2 py-1 lg:px-4 lg:py-2 rounded">
-          Blue
-        </button>
-        <button class="bg-red-600 px-2 py-1 lg:px-4 lg:py-2 rounded">
-          Red
-        </button>
-        <button class="bg-yellow-500 px-2 py-1 lg:px-4 lg:py-2 rounded">
-          Yellow
-        </button>
-        <button class="bg-purple-600 px-2 py-1 lg:px-4 lg:py-2 rounded">
-          Purple
-        </button>
-        <button class="bg-pink-500 px-2 py-1 lg:px-4 lg:py-2 rounded">
-          Pink
-        </button>
-        <button class="bg-teal-500 px-2 py-1 lg:px-4 lg:py-2 rounded">
-          Teal
-        </button>
-        <button class="bg-orange-600 px-2 py-1 lg:px-4 lg:py-2 rounded">
-          Orange
-        </button>
-        <button class="bg-gray-700 px-2 py-1 lg:px-4 lg:py-2 rounded">
-          Gray
-        </button>
-        <button class="bg-indigo-600 px-2 py-1 lg:px-4 lg:py-2 rounded">
-          Indigo
-        </button>
-      </div>
+      <!-- data-color is the Tailwind class applied to <body> -->
+      <button data-color="bg-green-600" class="rounded bg-green-600 px-3 py-1 lg:px-4 lg:py-2">Green</button>
+      <button data-color="bg-blue-600" class="rounded bg-blue-600 px-3 py-1 lg:px-4 lg:py-2">Blue</button>
+      <button data-color="bg-red-600" class="rounded bg-red-600 px-3 py-1 lg:px-4 lg:py-2">Red</button>
+      <button data-color="bg-yellow-500" class="rounded bg-yellow-500 px-3 py-1 lg:px-4 lg:py-2">Yellow</button>
+      <button data-color="bg-purple-600" class="rounded bg-purple-600 px-3 py-1 lg:px-4 lg:py-2">Purple</button>
+      <button data-color="bg-pink-500" class="rounded bg-pink-500 px-3 py-1 lg:px-4 lg:py-2">Pink</button>
+      <button data-color="bg-teal-500" class="rounded bg-teal-500 px-3 py-1 lg:px-4 lg:py-2">Teal</button>
+      <button data-color="bg-orange-600" class="rounded bg-orange-600 px-3 py-1 lg:px-4 lg:py-2">Orange</button>
+      <button data-color="bg-gray-700" class="rounded bg-gray-700 px-3 py-1 lg:px-4 lg:py-2">Gray</button>
+      <button data-color="bg-indigo-600" class="rounded bg-indigo-600 px-3 py-1 lg:px-4 lg:py-2">Indigo</button>
+      <button data-color="bg-black" class="rounded border border-gray-300 bg-black px-3 py-1 lg:px-4 lg:py-2">Black</button>
     </div>
+
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
-y

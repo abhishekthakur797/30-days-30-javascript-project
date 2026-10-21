@@ -1,47 +1,62 @@
+const form = document.querySelector(".row");
 const inputBox = document.querySelector("#input-box");
 const listContainer = document.querySelector("#list-container");
-const addBtn = document.querySelector("#addBtn");
 
-// if click on the button it will append li list
-addBtn.addEventListener("click", function addTask() {
-  if (inputBox.value === "") {
-    alert("You must write something");
-  } else {
-    let li = document.createElement("li");
-    li.innerHTML = inputBox.value;
+// Tasks are stored as an array of { text, done } objects.
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+function saveTasks() {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function renderTasks() {
+  listContainer.innerHTML = "";
+
+  tasks.forEach((task, index) => {
+    const li = document.createElement("li");
+    li.textContent = task.text; // textContent stops user input from being run as HTML
+    li.dataset.index = index;
+    if (task.done) li.classList.add("checked");
+
+    const deleteBtn = document.createElement("span");
+    deleteBtn.textContent = "×";
+    deleteBtn.title = "Delete task";
+    li.appendChild(deleteBtn);
+
     listContainer.appendChild(li);
-    // cross icon will be there for deleting the task
-    let span = document.createElement("span"); // we have created a element span
-    span.innerHTML = "\u00d7"; // we have add innerHTML value of span and give code
-    li.appendChild(span); // now it add in li
+  });
+}
+
+// Add a task (button click or Enter key)
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const text = inputBox.value.trim();
+
+  if (!text) {
+    alert("You must write something!");
+    return;
   }
-  // after adding the element it will empty the input box for new value.
+
+  tasks.push({ text, done: false });
   inputBox.value = "";
-  saveData(); // every time we add new item it will add here and save the data
+  saveTasks();
+  renderTasks();
 });
 
-// function to tick and delete list
-// the list item is storing in list-container so we will target list container.
+// Toggle or delete a task. One listener on the list handles every item.
+listContainer.addEventListener("click", (event) => {
+  const li = event.target.closest("li");
+  if (!li) return;
+  const index = Number(li.dataset.index);
 
-listContainer.addEventListener("click", function (e) {
-  if (e.target.tagName === "LI") {
-    e.target.classList.toggle("checked");
-    saveData(); // after checkbox it will save data.
-  } else if (e.target.tagName === "SPAN") {
-    e.target.parentElement.remove();
-    saveData(); // after every delete it will save data.
+  if (event.target.tagName === "SPAN") {
+    tasks.splice(index, 1);
+  } else {
+    tasks[index].done = !tasks[index].done;
   }
+
+  saveTasks();
+  renderTasks();
 });
 
-// storing the data in Local storage.
-function saveData() {
-  localStorage.setItem("data", listContainer.innerHTML);
-}
-
-// when we will close browser it will save the data
-
-function showTask() {
-  listContainer.innerHTML = localStorage.getItem("data");
-}
-
-showTask();
+renderTasks();

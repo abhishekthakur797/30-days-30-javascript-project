@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Calculator buttons (src/12_Calculator) */
+@layer components {
+  .key {
+    @apply rounded-lg bg-gray-700/60 py-4 font-semibold transition hover:bg-gray-600 active:scale-95;
+  }
+
+  .key.op {
+    @apply text-blue-400;
+  }
+}

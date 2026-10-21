@@ -3,37 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StopWatch</title>
+    <title>Stopwatch</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="../output.css" />
   </head>
-  <body class="bg-gradient-to-r from-slate-900 to-slate-700 text-white">
-    <div class="container h-screen flex items-center justify-center">
-      <div
-        class="content flex flex-col items-center justify-center gap-4 rounded-lg p-3 min-h-60 min-w-96"
-      >
-        <h1 id="displayTime" class="text-6xl font-bold">00 : 00 : 00</h1>
-        <div
-          class="control flex items-center justify-center text-center gap-5 mt-3"
+  <body class="flex min-h-screen items-center justify-center bg-gradient-to-r from-slate-900 to-slate-700 text-white">
+    <div class="flex flex-col items-center gap-10 rounded-2xl bg-white/5 px-10 py-12 shadow-2xl sm:px-16">
+      <h1 id="displayTime" class="font-mono text-5xl font-bold tabular-nums sm:text-6xl">00 : 00 : 00</h1>
+
+      <div class="flex items-center gap-6">
+        <button
+          id="stop"
+          aria-label="Stop"
+          class="flex h-16 w-16 items-center justify-center rounded-full border border-white text-xl transition hover:bg-white/20"
         >
-          <i
-            id="stop"
-            class="fa-solid fa-stop bg-transparent border-white hover:bg-gray-600 border rounded-full py-6 px-7 text-xl cursor-pointer"
-          ></i>
-          <i
-            id="start"
-            class="fa-solid fa-play bg-blue-600 hover:bg-blue-700 hover:transition rounded-full py-8 px-9 text-3xl cursor-pointer"
-          ></i>
-          <i
-            id="reset"
-            class="fa-solid fa-rotate-right bg-transparent border-white hover:bg-gray-600 border rounded-full p-6 text-xl cursor-pointer"
-          ></i>
-        </div>
+          <i class="fa-solid fa-stop"></i>
+        </button>
+        <button
+          id="start"
+          aria-label="Start"
+          class="flex h-24 w-24 items-center justify-center rounded-full bg-blue-600 text-3xl shadow-lg transition hover:bg-blue-700"
+        >
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button
+          id="reset"
+          aria-label="Reset"
+          class="flex h-16 w-16 items-center justify-center rounded-full border border-white text-xl transition hover:bg-white/20"
+        >
+          <i class="fa-solid fa-rotate-right"></i>
+        </button>
       </div>
     </div>
+
     <script src="script.js"></script>
-    <script
-      src="https://kit.fontawesome.com/afcdfd8069.js"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
